@@ -1,0 +1,65 @@
+# Environment secrets
+.env
+.env.*
+!.env.example
+
+# Dependencies and virtual environments
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Build and generated files
+**/dist/
+**/build/
+**/coverage/
+**/.cache/
+*.log
+
+# AI models and large model files
+**/models/
+*.safetensors
+*.ckpt
+*.gguf
+*.pth
+*.pt
+*.onnx
+
+# Local runtime nested Git repositories
+/local-image-runtime/.git/
+/local-image-runtime/ggml/.git/
+/local-image-runtime/examples/server/frontend/.git/
+/local-image-runtime/thirdparty/libwebp/.git/
+/local-image-runtime/thirdparty/libwebm/.git/
+/local-image-runtime/thirdparty/cutlass/.git/
+
+# Local editor environment
+.vscode/.venv/
+
+# Unnecessary personal file
+/Unsaved Document 2
+
+# Editor settings
+.vscode/
+
+# External Stable Diffusion runtime (not included in this repository)
+/local-image-runtime/
+
+# Generated AI outputs
+/ai-engine/outputs/
+
+# User-generated and uploaded files
+/backend/storage/
+
+# Downloaded executable binaries
+/ai-engine/tools/realesrgan/realesrgan-ncnn-vulkan
+
+# Temporary and backup archives
+*.tmp
+*.bak
+
+# Duplicate source-code archives
+/ai-engine/app/services/services.zip
+/ai-engine/app/api/routes/routes.zip
+/ai-engine/app/api/schemas/schemas.zip

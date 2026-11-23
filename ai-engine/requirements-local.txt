@@ -1,0 +1,8 @@
+# Install these into the project's existing Python environment.
+# Keep the existing pinned PyTorch/torchvision versions unchanged.
+requests>=2.31,<3
+fastapi>=0.100
+uvicorn[standard]>=0.23
+pydantic>=2
+Pillow>=10
+python-dotenv>=1.0,<2
