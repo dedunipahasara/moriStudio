@@ -1,0 +1,12 @@
+import { Router, type Router as ExpressRouter } from "express";
+import { authMiddleware } from "../../middleware/auth.middleware.js";
+import { validate } from "../../middleware/validation.middleware.js";
+import { getGenerationAssetsController, getAssetByIdController, getAssetFileController, deleteAssetController } from "./asset.controller.js";
+import { assetIdSchema, assetModelIdSchema, assetListSchema } from "./asset.validation.js";
+const router: ExpressRouter = Router();
+router.use(authMiddleware);
+router.get("/generation/:generationId", validate(assetModelIdSchema), validate(assetListSchema), getGenerationAssetsController);
+router.get("/:id/file", validate(assetIdSchema), getAssetFileController);
+router.get("/:id", validate(assetIdSchema), getAssetByIdController);
+router.delete("/:id", validate(assetIdSchema), deleteAssetController);
+export default router;
