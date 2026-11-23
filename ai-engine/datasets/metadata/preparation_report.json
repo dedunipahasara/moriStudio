@@ -1,0 +1,7 @@
+{
+    "total_images": 30,
+    "processed_images": 30,
+    "training_images": 24,
+    "validation_images": 6,
+    "failed_images": []
+}

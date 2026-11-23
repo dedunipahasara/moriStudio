@@ -1,0 +1,122 @@
+[
+  {
+    "image": "animal_01_cat.png",
+    "caption": "A cute fluffy white 3D cartoon kitten with blue eyes and a red collar."
+  },
+  {
+    "image": "animal_02_dog.png",
+    "caption": "A cute brown and white 3D cartoon puppy with floppy ears."
+  },
+  {
+    "image": "animal_03_rabbit.png",
+    "caption": "A cute white 3D cartoon rabbit holding an orange carrot."
+  },
+  {
+    "image": "animal_04_elephant.png",
+    "caption": "A cute small grey 3D cartoon elephant with large ears."
+  },
+  {
+    "image": "animal_05_lion.png",
+    "caption": "A cute golden 3D cartoon lion with a fluffy brown mane."
+  },
+  {
+    "image": "animal_06_deer.png",
+    "caption": "A cute tan 3D cartoon deer with white spots."
+  },
+  {
+    "image": "animal_07_panda.png",
+    "caption": "A cute 3D cartoon panda sitting and holding bamboo."
+  },
+  {
+    "image": "animal_08_fox.png",
+    "caption": "A cute orange 3D cartoon fox with a fluffy tail."
+  },
+  {
+    "image": "animal_09_koala.png",
+    "caption": "A cute grey 3D cartoon koala hugging a tree branch."
+  },
+  {
+    "image": "animal_10_penguin.png",
+    "caption": "A cute black and white 3D cartoon penguin wearing an orange scarf."
+  },
+  {
+    "image": "animal_11_turtle.png",
+    "caption": "A cute green 3D cartoon turtle with a brown shell."
+  },
+  {
+    "image": "animal_12_dolphin.png",
+    "caption": "A cute blue 3D cartoon dolphin jumping through water."
+  },
+  {
+    "image": "bird_01_bluebird.png",
+    "caption": "A cute blue 3D cartoon bird perched on a leafy branch."
+  },
+  {
+    "image": "bird_02_parrot.png",
+    "caption": "A colourful red and yellow 3D cartoon parrot perched on a branch."
+  },
+  {
+    "image": "bird_03_owl.png",
+    "caption": "A cute brown 3D cartoon owl with large round eyes."
+  },
+  {
+    "image": "bird_04_chick.png",
+    "caption": "A fluffy yellow 3D cartoon baby chick spreading its wings."
+  },
+  {
+    "image": "bird_05_swan.png",
+    "caption": "A graceful white 3D cartoon swan floating on a pond."
+  },
+  {
+    "image": "bird_06_hummingbird.png",
+    "caption": "A colourful 3D cartoon hummingbird hovering beside a pink flower."
+  },
+  {
+    "image": "robot_01.png",
+    "caption": "A friendly white and blue 3D cartoon robot waving."
+  },
+  {
+    "image": "robot_02.png",
+    "caption": "A cute pink and white 3D cartoon robot making a peace sign."
+  },
+  {
+    "image": "robot_03.png",
+    "caption": "A cheerful yellow 3D cartoon robot standing upright."
+  },
+  {
+    "image": "robot_04.png",
+    "caption": "A small white and blue 3D cartoon robot on four wheels."
+  },
+  {
+    "image": "robot_05.png",
+    "caption": "A friendly white and blue 3D cartoon robot holding a game controller."
+  },
+  {
+    "image": "robot_06.png",
+    "caption": "A cute white and blue 3D cartoon robot using a laptop."
+  },
+  {
+    "image": "human_01_boy.png",
+    "caption": "A cute 3D cartoon boy wearing a blue jacket and backpack."
+  },
+  {
+    "image": "human_02_girl.png",
+    "caption": "A cute 3D cartoon girl wearing pink headphones and a pink hoodie."
+  },
+  {
+    "image": "human_03_man.png",
+    "caption": "A friendly 3D cartoon young man with glasses and a brown backpack."
+  },
+  {
+    "image": "human_04_woman.png",
+    "caption": "A friendly 3D cartoon young woman with glasses holding a book."
+  },
+  {
+    "image": "couple_01.png",
+    "caption": "A cute 3D cartoon couple sharing a warm affectionate moment."
+  },
+  {
+    "image": "couple_02.png",
+    "caption": "A cute 3D cartoon couple smiling together in winter hats and scarves."
+  }
+]
