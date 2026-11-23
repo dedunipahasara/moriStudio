@@ -1,0 +1,126 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum GenerationStatus {
+  PENDING
+  PROCESSING
+  COMPLETED
+  FAILED
+}
+
+enum AssetType {
+  IMAGE
+  THUMBNAIL
+  OTHER
+}
+
+model User {
+  id                      String                   @id @default(uuid())
+  name                    String
+  email                   String                   @unique
+  passwordHash            String
+  emailVerifiedAt         DateTime?
+  generations             Generation[]
+  uploadedAssets          UploadedAsset[]
+  passwordResetTokens     PasswordResetToken[]
+  emailVerificationTokens EmailVerificationToken[]
+  createdAt               DateTime                 @default(now())
+  updatedAt               DateTime                 @updatedAt
+
+  @@index([email])
+}
+
+model Generation {
+  id             String           @id @default(uuid())
+  userId         String
+  prompt         String           @db.Text
+  style          String?
+  width          Int              @default(512)
+  height         Int              @default(512)
+  seed           Int?
+  status         GenerationStatus @default(PENDING)
+  provider       String           @default("internal")
+  errorMessage   String?          @db.Text
+  user           User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  image          GeneratedImage?
+  createdAt      DateTime         @default(now())
+  updatedAt      DateTime         @updatedAt
+
+  @@index([userId])
+  @@index([status])
+  @@index([createdAt])
+}
+
+model GeneratedImage {
+  id           String               @id @default(uuid())
+  generationId String               @unique
+  name         String
+  description  String?              @db.Text
+  assets       GeneratedImageAsset[]
+  generation   Generation           @relation(fields: [generationId], references: [id], onDelete: Cascade)
+  createdAt    DateTime             @default(now())
+  updatedAt    DateTime             @updatedAt
+
+  @@index([createdAt])
+}
+
+model GeneratedImageAsset {
+  id        String        @id @default(uuid())
+  imageId   String
+  type      AssetType
+  fileUrl   String
+  mimeType  String?
+  fileSize  BigInt?
+  image     GeneratedImage @relation(fields: [imageId], references: [id], onDelete: Cascade)
+  createdAt DateTime      @default(now())
+
+  @@index([imageId])
+  @@index([type])
+}
+
+model UploadedAsset {
+  id           String   @id @default(uuid())
+  userId       String
+  originalName String
+  filename     String   @unique
+  storagePath  String
+  mimeType     String
+  fileSize     BigInt
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt    DateTime @default(now())
+
+  @@index([userId])
+  @@index([createdAt])
+}
+
+model PasswordResetToken {
+  id        String    @id @default(uuid())
+  userId    String
+  tokenHash String    @unique
+  expiresAt DateTime
+  usedAt    DateTime?
+  createdAt DateTime  @default(now())
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([expiresAt])
+}
+
+model EmailVerificationToken {
+  id        String    @id @default(uuid())
+  userId    String
+  tokenHash String    @unique
+  expiresAt DateTime
+  usedAt    DateTime?
+  createdAt DateTime  @default(now())
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([expiresAt])
+}
